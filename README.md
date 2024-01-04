@@ -5,3 +5,4 @@
 Digital Resume with a Python Backend
 
 
+This is my first attemp of build a portfolio using Django
