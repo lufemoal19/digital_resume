@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-y^+r(54ot3!m)i7u84a99t7t+_!ow2(+4n^y^_c@w+8q3zx)2(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['digital-resume.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -137,8 +138,11 @@ STATICFILES_DIRS = [
 # STATIC_URL = "/static/"
 # STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = BASE_DIR / "mediafiles"
+
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "mediafiles"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
